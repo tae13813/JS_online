@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Document</title>
+    <style>
+        .card {
+            background-color: #c3c5c5;
+            height: 330px;
+            width: 600px;
+            position: relative;
+            left: auto;
+            top: 30vh;
+            margin-left: auto;
+            margin-right: auto;
+            border: 5px solid;
+            padding: 10px;
+            animation-name: cd;
+            animation-duration: 20s;
+    
+        }
+    
+      
+    
+        .text {
+            font-size: 20px;
+            font-weight: bold;
+    
+        }
+    
+        .But {
+            position: relative;
+            top: 30px;
+            left: 250px;
+    
+        }
+    
+        .but1 {
+            background-color: #fcfbf9;
+            border-radius: 15px;
+            width: 25vh;
+            height: 5vh;
+            position: relative;
+            right: 7.5vh;
+            font-size: 26px;
+            font-weight: bold;
+    
+        }
+    
+        .but1:hover {
+            background-color: #FFE4E1;
+            font-size: 26px;
+    
+        }
+    </style>
+</head>
+    <body>
+        <div class=" card">
+    <h2 class="title is-2 has-text-centered">คำนวณดอกเบี้ย</h2>
+    <div class="Month">
+        <label class="text" for="U">  จำนวนงวด </label>
+                <input class="input" id="Month" type="number">
+
+    </div>
+    <div class="price">
+        <label class="text" for="P"> ราคาของที่จะซื้อ </label>
+                <input class="input" id="price" type="number">
+
+    </div>
+    <div class="Interest">
+        <label class="text" for="P"> อัตราดอกเบี้ย ( % ) </label>
+                <input class="input" id="Interest" type="number">
+
+    </div>
+    <div class="But">
+        <a><button class="but1" onclick="triangle()">คำนวณ </button> </a>
+
+    </div>
+
+    </div>
+
+    <script>
+        function triangle() {
+            let Month = document.getElementById("Month").value;
+            let price = document.getElementById("price").value;
+            let Interest = document.getElementById("Interest").value;
+
+            let total1=0;
+            let total2=0;
+            let total3=0;
+            total1=(price*Interest)/100;
+	        total2=price/Month;
+	        total3=total1+total2;
+
+            alert("ต้องจ่ายดอกเบี้ยทั้งหมด " + parseInt(total3));
+
+
+        }
+
+
+    </script>
+
+    </body>
+
+</html>
